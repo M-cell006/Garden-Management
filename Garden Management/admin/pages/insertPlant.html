@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <title>Insert or edit</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+        <!-- Custom styles for this template -->
+        <link href="../css/starter-template.css" rel="stylesheet">
+
+        <!-- Silence error favicon -->
+        <link rel="icon" href="#" />
+  </head>
+  <body>
+    
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    
+      <span class="fs-4">insertPlant.html</span>
+    
+  </header>
+
+  <main>
+    <h1>Add or edit</h1>
+    <hr>
+
+    <div class="card text-center">
+      <div class="card-header">
+        <h5 class="card-title">Insert a new plant/edit details</h5>
+      </div>
+
+      <div class="card-body">
+
+        <form class="row g-3" id ="insertForm">
+          <div class="col-md-4">
+
+            <label for="plantnameid" class="form-label">Plant</label>
+            <select class="form-select is-invalid" name="plant" id = "plantid">
+              <option value="">Select an option</option>
+                <!---subjects will be dislayed here in a dropdown list -->
+            </select>
+            <div class="invalid-feedback">
+              Please select an existing plant or add a new one.
+            </div>
+          </div>
+          <div class="col-md-4">
+
+            <label for="categorynameid" class="form-label">Category</label>
+            <select class="form-select is-invalid" name="category" id = "categorynameid" required>  
+              <option value="">Select the plant's category</option> 
+              <!-- levels will be dislayed here in a dropdown list -->
+              
+            </select>
+            <div class="invalid-feedback">
+              Please select a category.
+            </div>
+          </div>
+         
+            <div class="col-md-4">
+
+              <div class="list-container">
+                <h6>Hardiness</h6>
+                <ul class="list-group border border-grey" name="hardiness" id="hardinesslistid" >
+                  <li class="list-group-item">
+                     <!-- types will be dislayed here in a list -->
+                  </li>
+             
+                </ul>
+              </div>
+             
+            </div>
+
+      
+          
+
+          <div class="col-md-4" >
+          
+            <label id="newplantlabel" style="display: none;"> New Plant </label>
+          
+            <input type="text" class="form-control is-invalid" id="newplantnameid" style="display: none;">
+           
+          </div>
+
+          <div class="col-md-4">
+            </div>
+
+          <div class="col-md-4">
+            <label for="newplant--nameid" class="form-label">Add a new plant</label>
+            <input type="text" class="form-control is-invalid" id="newplantnameid" required>
+            <div class="invalid-feedback">
+              Please provide a new plant.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="newplant--botnameid" class="form-label">Write botanical name</label>
+            <input type="text" class="form-control is-invalid" id="newplantbotnameid" required>
+            <div class="invalid-feedback">
+              Please write botanical name.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="descriptionid" class="form-label">Description</label> 
+            <div class="input-with-pound">
+              <span class="pound-sign"></span>       
+              <input type="text" class="form-control is-invalid" id="descriptionid" required>
+            </div>
+              <div class="invalid-feedback">
+              Please provide a short description of the plant.
+            </div>
+          </div>
+
+          <label for="newcategorynameid" class="form-label">Category</label>
+            <select class="form-select is-invalid" name="category" id = "categorynameid" required>  
+              <option value="">Select the plant's category</option> 
+              <!-- categories will be dislayed here in a dropdown list --> 
+            </select>
+            <div class="invalid-feedback">
+              Please select a category.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="minspreadid" class="form-label">Write minimum spread (cm).</label>
+            <input type="number" class="form-control is-invalid" id="newminspreadid" required>
+            <div class="invalid-feedback">
+              Please write minimum spread.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="maxspreadid" class="form-label">Write maximum spread (cm).</label>
+            <input type="number" class="form-control is-invalid" id="newmaxspreadid" required>
+            <div class="invalid-feedback">
+              Please write maximum spread.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="minheightid" class="form-label">Write minimum height (cm).</label>
+            <input type="number" class="form-control is-invalid" id="newminheightid" required>
+            <div class="invalid-feedback">
+              Please write minimum height.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="maxheightid" class="form-label">Write maximum height (cm).</label>
+            <input type="number" class="form-control is-invalid" id="newmaxheightid" required>
+            <div class="invalid-feedback">
+              Please write minimum spread.
+            </div>
+          </div>
+
+       
+
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="confirmid" required>
+              <label for="confirmid" class="form-check-label">
+                Please confirm the transaction
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+         
+              
+  
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit" id="submitid">Submit form</button>
+            </div>
+
+          
+      
+
+          
+
+
+        </form>
+
+       
+      </div>
+
+      <div class="card-footer text-muted">
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="showUsers"></div>
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered text-center" id="customerlist">
+                <thead>
+                 
+                </thead>
+
+                <tbody></tbody>
+    
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2>Linked files</h2>
+
+        <ul class="icon-list">
+          <li class="text-muted"> ../js/getSubjectsforInsert.js </li>
+          <li class="text-muted"> ../php/getSubjects.php</li>
+          <li class="text-muted"> ../js/getLevels.js</li>
+          <li class="text-muted"> ../php/getLevels.php</li>
+          <li class="text-muted"> ../js/getTopicsforInsert.js</li>
+          <li class="text-muted"> ../php/getTopics.php</li>
+          <li class="text-muted"> ../js/utils.js</li>
+          <li class="text-muted"> ../js/insertProductValidate.js</li>
+          <li class="text-muted"> ../js/insertProduct.js </li>
+          <li class="text-muted"> ../php/insertProduct.php</li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Homepage</h2>
+        <ul class="icon-list">
+          <li> <a class="nav-link px-3" href="adminFunction.html">Back to Dashboard</a></li> 
+        </ul> 
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="pt-5 my-5 text-muted border-top">
+    Created by DR-E &middot; &copy; 2023
+  </footer>
+</div>
+
+  <script src="../js/getSubjectsforInsert.js"></script>   
+  <script src="../js/getLevels.js"></script>   
+  <script src="../js/getTopicsforInsert.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/insertProductValidate.js"></script>
+  <script src="../js/insertProduct.js"></script>
+
+      
+  </body>
+</html>

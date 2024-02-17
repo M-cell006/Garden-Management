@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <title>Insert or edit</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+        <!-- Custom styles for this template -->
+        <link href="../css/starter-template.css" rel="stylesheet">
+
+        <!-- Silence error favicon -->
+        <link rel="icon" href="#" />
+  </head>
+  <body>
+    
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    
+      <span class="fs-4">insertTask.html</span>
+    
+  </header>
+
+  <main>
+    <h1>Add or edit</h1>
+    <hr>
+
+    <div class="card text-center">
+      <div class="card-header">
+        <h5 class="card-title">Insert a new task/edit details</h5>
+      </div>
+
+      <div class="card-body">
+
+        <form class="row g-3" id ="insertForm">
+          <div class="col-md-4">
+
+            <label for="plantid" class="form-label">Plant</label>
+            <select class="form-select is-invalid" name="plant" id = "plantid">
+              <option value="">Select an option</option>
+                <!---subjects will be dislayed here in a dropdown list -->
+            </select>
+            <div id = "invalidFeedback" class="invalid-feedback">
+              Please select an existing plant.
+            </div>
+          </div>
+          <div class="col-md-4">
+
+            <label for="tasknameid" class="form-label">Task</label>
+            <select class="form-select is-invalid" name="task" id = "tasknameid" required>  
+              <option value="">Select the task name.</option>
+            </select>
+            <div id = "invalidFeedback" class="invalid-feedback">
+              Please select a task.
+            </div>
+          </div>
+         
+          <div class="col-md-4">
+            <label for="frequencyid" class="form-label">Frequency</label> 
+            <div class="input-with-pound">   
+              <input type="number" class="form-control is-invalid" id="frequencyid" step="1" min = "1" max = "365" required>
+            </div>
+              <div class="invalid-feedback">
+              Please enter how often the task needs to be repeated in days.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="descriptionid" class="form-label">Description</label> 
+            <div class="input-with-pound">   
+              <input type="text" class="form-control is-invalid" id="descriptionid">
+            </div>
+              <div class="invalid-feedback">
+              Please provide a short description of the task.
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="form-check">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="confirmid" required>
+              <label for="confirmid" class="form-check-label">
+                Please confirm the transaction
+              </label>
+              <div id = "invalidFeedback" class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+         
+              
+  
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit" id="submitid">Submit form</button>
+            </div>
+        </form>
+
+       
+      </div>
+
+      <div class="card-footer text-muted">
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="showUsers"></div>
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered text-center" id="customerlist">
+                <thead>
+                 
+                </thead>
+
+                <tbody></tbody>
+    
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row g-5">
+      <div class="col-md-6">
+        
+
+      <div class="col-md-6">
+        <h2>Homepage</h2>
+        <ul class="icon-list">
+          <li> <a class="nav-link px-3" href="adminFunction.html">Back to Dashboard</a></li> 
+        </ul> 
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="pt-5 my-5 text-muted border-top">
+    Created by DR-E &middot; &copy; 2023
+  </footer>
+</div>
+
+  <script src="../js/getPlants.js"></script>   
+  <script src="../js/getTasks.js"></script>   
+  <script src="../js/insertTask.js"></script>
+  <!---<script src="../js/utils.js"></script>
+  <script src="../js/insertProductValidate.js"></script>
+  <script src="../js/insertProduct.js"></script>-->
+
+      
+  </body>
+</html>
